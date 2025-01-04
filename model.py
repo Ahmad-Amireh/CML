@@ -2,7 +2,7 @@ import json
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
-RFC_FOREST_DEPTH = 2
+RFC_FOREST_DEPTH = 5
 
 
 def train_model(X_train, y_train):

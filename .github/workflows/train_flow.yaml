@@ -19,6 +19,11 @@ jobs:
         with:
           python-version: 3.9
 
+      
+      - name: Dependences
+        run: |
+          pip install -r requirements.txt
+
       # Setup CML GitHub Action
       - name: Setup CML
         uses: iterative/setup-cml@v2
