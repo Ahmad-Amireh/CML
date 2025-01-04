@@ -5,7 +5,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split as sklearn_train_test_split
 from utils_and_constant import (
     DROP_COLNAMES,
-    PROCESSED_DATASET,
+    PROCESSED_DATASET_TEST,
+    PROCESSED_DATASET_TRAIN,
     RAW_DATASET,
     TARGET_COLUMN,
 )
@@ -62,8 +63,8 @@ def main():
     weather_test = pd.concat([X_test_pre, y_test], axis=1)
 
     # Save processed datasets
-    weather_train.to_csv(PROCESSED_DATASET.replace(".csv", "_train.csv"), index=False)
-    weather_test.to_csv(PROCESSED_DATASET.replace(".csv", "_test.csv"), index=False)
+    weather_train.to_csv(PROCESSED_DATASET_TRAIN, index=False)
+    weather_test.to_csv(PROCESSED_DATASET_TEST, index=False)
 
     return weather_train, weather_test
 
